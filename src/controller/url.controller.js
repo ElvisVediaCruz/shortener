@@ -15,7 +15,7 @@ class UrlController {
             });
             await newUrl.save();
             res.json({
-                "newUrl": `${process.env.URL}/${encodedUrl}`
+                "newUrl": `${process.env.URL}/url/${encodedUrl}`
             });
         } catch (error) {
             return res.status(500).json({
