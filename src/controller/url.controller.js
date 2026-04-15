@@ -15,7 +15,7 @@ class UrlController {
             });
             await newUrl.save();
             res.json({
-                "newUrl": `http://localhost:3000/url/${encodedUrl}`
+                "newUrl": `${process.env.url}/${encodedUrl}`
             });
         } catch (error) {
             return res.status(500).json({
