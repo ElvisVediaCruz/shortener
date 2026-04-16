@@ -15,6 +15,7 @@ const app = express();
 
 connectDB();
 
+app.set('trust proxy', 1); // Para que express-rate-limit funcione correctamente detrás de proxies como Heroku
 app.use(cors({
     origin: "*",
     methods: ["GET", "POST"],

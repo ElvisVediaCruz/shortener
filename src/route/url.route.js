@@ -9,7 +9,7 @@ const urlController = new UrlController();
 
 const limiter = rateLimit({
     windowMs: 60 * 1000,
-    max: 1,
+    max: 5,
     message: {
         error: "Demasiadas solicitudes. Intenta más tarde."
     }
